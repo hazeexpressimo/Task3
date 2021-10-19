@@ -11,9 +11,9 @@ public class Main {
 
     private void run() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        boolean f = false;
         ApartmentBuilder apartmentBuilder = new ApartmentBuilder();
         ApartmentFilter apartmentFilter = new ApartmentFilter();
+        boolean f = false;
         while (!f) {
             System.out.println("Make your choice...");
             System.out.println("1. Add apartments.");
