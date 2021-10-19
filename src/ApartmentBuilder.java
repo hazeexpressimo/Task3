@@ -1,10 +1,13 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
 public class ApartmentBuilder {
+    List<House> housesList = new ArrayList<>();
 
-
-    public void addAppartment() throws IOException {
+    public List<House> addAppartment(List<House> list) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Enter number of apartments: ");
         int countOfApartments = Integer.parseInt(reader.readLine());
@@ -21,11 +24,8 @@ public class ApartmentBuilder {
             int numberOfRooms = Integer.parseInt(reader.readLine());
             System.out.print("Enter street name: ");
             String streetName = reader.readLine();
-            addHouse(new House(houseId, apNumber, area, floor, numberOfRooms, streetName));
+            list.add(new House(houseId, apNumber, area, floor, numberOfRooms, streetName));
         }
-    }
-
-    public static void addHouse(House house) {
-        House.housesList.add(house);
+        return housesList;
     }
 }

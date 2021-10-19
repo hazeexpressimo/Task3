@@ -7,7 +7,7 @@ public class House {
     private int floor;
     private int numberOfRoom;
     private String streetName;
-    protected static ArrayList<House> housesList = new ArrayList<>();
+
 
     public House(int houseId, int apartmentNumber, double area, int floor, int numberOfRoom, String streetName) {
         this.houseId = houseId;

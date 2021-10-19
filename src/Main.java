@@ -26,22 +26,22 @@ public class Main {
             int menuChoice = Integer.parseInt(reader.readLine());
             switch (menuChoice) {
                 case 1 -> {
-                    apartmentBuilder.addAppartment();
+                    apartmentBuilder.addAppartment(apartmentBuilder.housesList);
                 }
                 case 2 -> {
-                    apartmentFilter.getRoomList();
+                    apartmentFilter.getRoomList(apartmentBuilder.housesList);
                 }
                 case 3 -> {
-                    apartmentFilter.getRoomAndFloorList();
+                    apartmentFilter.getRoomAndFloorList(apartmentBuilder.housesList);
                 }
                 case 4 -> {
-                    apartmentFilter.getAreaMoreThanSelected();
+                    apartmentFilter.getAreaMoreThanSelected(apartmentBuilder.housesList);
                 }
                 case 5 -> {
-                    apartmentFilter.getAllApartmentsWithArea();
+                    apartmentFilter.getAllApartmentsWithArea(apartmentBuilder.housesList);
                 }
                 case 6 -> {
-                    apartmentFilter.getFloorsWithApartments();
+                    apartmentFilter.getFloorsWithApartments(apartmentBuilder.housesList);
                 }
                 case 7 -> {
                     f = true;
