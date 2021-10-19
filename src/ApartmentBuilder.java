@@ -26,6 +26,6 @@ public class ApartmentBuilder {
             String streetName = reader.readLine();
             list.add(new House(houseId, apNumber, area, floor, numberOfRooms, streetName));
         }
-        return housesList;
+        return list;
     }
 }
